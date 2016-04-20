@@ -1,0 +1,33 @@
+<ion-view view-title="Izarrak in tha hell">
+  <ion-content>
+    <div class="list card">
+
+      <div class="item item-body">
+        <img class="full-image" src="../img/maxresdefault.jpg">
+        <p>
+          7 pistaz osatuko maketa, Kimikari eta Motx-en eskutik,base guztiak Motx a.k.a BigMosen kargu 6.pista izan
+          ezik.Disfrutau.
+          Maketa formada por 7 pistas de la mano de Kimikari y Motx. Todas las bases estan producidas por Motx a.k.a
+          BigMos menos la sexta pista. Rateada del youtube. Disfrutad.
+          Rollo videoclips tambien hay.
+        </p>
+
+        <ion-item ng-repeat="song in songlist" ng-click="changeSong(song.id)">
+          {{song.id}}-{{song.title}}
+        </ion-item>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-calm">
+
+    <a ng-click="selectedSong(1)" class="button button-icon icon ion-ios-skipbackward"></a>
+    <h1 class="title">{{songlist[index].title}} <a class="button button-icon icon"
+                                ng-click="playPause()"
+                                ng-class="playing ? 'ion-play' : 'ion-pause'"></a></h1>
+    <a ng-click="selectedSong(2)" class="button button-icon icon ion-ios-skipforward"></a>
+
+  </ion-footer-bar>
+</ion-view>
